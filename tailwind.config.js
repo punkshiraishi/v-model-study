@@ -4,21 +4,7 @@ module.exports = {
     // purgeLayersByDefault: true,
   },
   purge: [],
-  theme: {
-    extend: {
-      colors: {
-        blue: {
-          default: "blue",
-        },
-        red: {
-          default: "red",
-        },
-        green: {
-          default: "green",
-        },
-      },
-    },
-  },
+  theme: {},
   variants: {},
   plugins: [],
 }

@@ -1,7 +1,5 @@
 <template>
-  <div class="w-10">
-    demo
-  </div>
+  <h1>demo</h1>
 </template>
 
 <script lang="ts">

@@ -1,13 +1,22 @@
 <template>
   <div>
     <p>Name</p>
-    <BaseInput v-model="value.name" />
+    <BaseInput
+      :value="value.name"
+      @input="onInput({ name: $event })"
+    />
 
     <p>Email</p>
-    <BaseInput v-model="value.email" />
+    <BaseInput
+      :value="value.email"
+      @input="onInput({ email: $event })"
+    />
 
     <p>Address</p>
-    <BaseInput v-model="value.address" />
+    <BaseInput
+      :value="value.address"
+      @input="onInput({ address: $event })"
+    />
   </div>
 </template>
 
@@ -29,5 +38,12 @@ interface User {
 export default class SampleForm extends Vue {
   @Prop({ default: {} })
   value!: User
+
+  onInput(event: { key: string }): void {
+    this.$emit("input", {
+      ...this.value,
+      ...event,
+    })
+  }
 }
 </script>

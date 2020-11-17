@@ -1,16 +1,20 @@
 <template>
   <div class="flex flex-col p-5 space-y-5">
-    <span class="text-xl font-bold">
-      壊れた SampleForm
-    </span>
-    <SampleForm v-model="user1" />
-    <pre>{{ user1 }}</pre>
+    <div class="flex flex-col p-5 space-y-3">
+      <span class="text-xl font-bold">
+        壊れた SampleForm
+      </span>
+      <SampleForm v-model="user1" />
+      <pre>{{ user1 }}</pre>
+    </div>
 
-    <span class="text-xl font-bold">
-      正しい SampleForm
-    </span>
-    <SampleForm v-model="user2" />
-    <pre>{{ user2 }}</pre>
+    <div class="flex flex-col p-5 space-y-3">
+      <span class="text-xl font-bold">
+        正しい SampleForm
+      </span>
+      <SampleForm v-model="user2" />
+      <pre>{{ user2 }}</pre>
+    </div>
   </div>
 </template>
 

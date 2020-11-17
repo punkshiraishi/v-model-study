@@ -26,7 +26,7 @@ interface User {
     BaseInput,
   },
 })
-export default class SampleFormNG extends Vue {
+export default class BrokenSampleForm extends Vue {
   @Prop({ default: {} })
   value!: User
 }

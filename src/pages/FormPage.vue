@@ -15,14 +15,12 @@
 </template>
 
 <script lang="ts">
-import BaseInput from "@/components/BaseInput.vue"
 import SampleForm from "@/components/SampleForm.vue"
 import BrokenSampleForm from "@/components/BrokenSampleForm.vue"
 import { Component, Vue } from "vue-property-decorator"
 
 @Component({
   components: {
-    BaseInput,
     SampleForm,
     BrokenSampleForm,
   },

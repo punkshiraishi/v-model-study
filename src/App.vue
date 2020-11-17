@@ -12,6 +12,6 @@ import PageNavigator from "./components/PageNavigator.vue"
   components: { PageNavigator },
 })
 export default class App extends Vue {
-  pages = ["top", "demo", "input"]
+  pages = ["top", "demo", "input", "form"]
 }
 </script>

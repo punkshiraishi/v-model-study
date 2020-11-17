@@ -1,14 +1,15 @@
 <template>
   <div class="flex flex-col p-5 space-y-5">
-    <h1>BaseInput</h1>
-    <BaseInput v-model="text" />
-
-    <h1>SampleForm NG</h1>
-    <SampleFormNG :value="user1" />
+    <span class="text-xl font-bold">
+      壊れた SampleForm
+    </span>
+    <SampleForm v-model="user1" />
     <pre>{{ user1 }}</pre>
 
-    <h1>SampleForm</h1>
-    <SampleForm :value="user2" />
+    <span class="text-xl font-bold">
+      正しい SampleForm
+    </span>
+    <SampleForm v-model="user2" />
     <pre>{{ user2 }}</pre>
   </div>
 </template>
@@ -16,20 +17,28 @@
 <script lang="ts">
 import BaseInput from "@/components/BaseInput.vue"
 import SampleForm from "@/components/SampleForm.vue"
-import SampleFormNG from "@/components/SampleFormNG.vue"
+import BrokenSampleForm from "@/components/BrokenSampleForm.vue"
 import { Component, Vue } from "vue-property-decorator"
 
 @Component({
   components: {
     BaseInput,
     SampleForm,
-    SampleFormNG,
+    BrokenSampleForm,
   },
 })
 export default class InputPage extends Vue {
-  text = ""
-  user1 = { name: "test", email: "test", address: "test" }
-  user2 = { name: "test", email: "test", address: "test" }
+  user1 = {
+    name: "shiraishi",
+    email: "shiraishi@shiraishi.com",
+    address: "tokyo",
+  }
+
+  user2 = {
+    name: "shiraishi",
+    email: "shiraishi@shiraishi.com",
+    address: "tokyo",
+  }
 }
 </script>
 
